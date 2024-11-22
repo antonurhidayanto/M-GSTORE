@@ -1,0 +1,161 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Dark Jeans Jacket",
+      "price": 100000,
+      "stock": 30,
+      "imageUrl": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Dark Jeans Jacket import",
+      "price": 150000,
+      "stock": 20,
+      "imageUrl": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+    },
+    {
+      "title": "Leather Boots",
+      "price": 450000,
+      "stock": 25,
+      "imageUrl": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "title": "Casual Sneakers",
+      "price": 200000,
+      "stock": 25,
+      "imageUrl": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Black Leather Belt",
+      "price": 85000,
+      "stock": 50,
+      "imageUrl": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Blue Denim Jeans",
+      "price": 150000,
+      "stock": 40,
+      "imageUrl": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Woolen Scarf",
+      "price": 60000,
+      "stock": 60,
+      "imageUrl": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Cotton Hoodie",
+      "price": 175000,
+      "stock": 35,
+      "imageUrl": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg"
+    },
+    {
+      "id": "9",
+      "title": "Leather Gloves",
+      "price": 120000,
+      "stock": 20,
+      "imageUrl": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg"
+    },
+    {
+      "id": "10",
+      "title": "Wool Beanie",
+      "price": 50000,
+      "stock": 45,
+      "imageUrl": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg"
+    },
+    {
+      "id": "11",
+      "title": "Plaid Shirt",
+      "price": 125000,
+      "stock": 30,
+      "imageUrl": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg"
+    },
+    {
+      "id": "12",
+      "title": "Suede Loafers",
+      "price": 225000,
+      "stock": 18,
+      "imageUrl": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg"
+    },
+    {
+      "id": "13",
+      "title": "Classic Watch",
+      "price": 400000,
+      "stock": 10,
+      "imageUrl": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg"
+    },
+    {
+      "id": "14",
+      "title": "Slim Fit Chinos",
+      "price": 140000,
+      "stock": 25,
+      "imageUrl": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg"
+    },
+    {
+      "id": "15",
+      "title": "Graphic T-Shirt",
+      "price": 85000,
+      "stock": 35,
+      "imageUrl": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
+    },
+    {
+      "id": "16",
+      "title": "Denim Jacket",
+      "price": 180000,
+      "stock": 12,
+      "imageUrl": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+    },
+    {
+      "id": "17",
+      "title": "Running Shoes",
+      "price": 250000,
+      "stock": 22,
+      "imageUrl": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+    },
+    {
+      "id": "18",
+      "title": "Leather Wallet",
+      "price": 95000,
+      "stock": 40,
+      "imageUrl": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"
+    },
+    {
+      "id": "19",
+      "title": "Wool Sweater",
+      "price": 165000,
+      "stock": 28,
+      "imageUrl": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+    },
+    {
+      "id": "20",
+      "title": "Dress Shoes",
+      "price": 275000,
+      "stock": 15,
+      "imageUrl": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": "618d",
+      "username": "anto",
+      "password": "password",
+      "role": "user"
+    },
+    {
+      "id": "65bc",
+      "username": "admin",
+      "password": "password",
+      "role": "admin"
+    }
+  ],
+  "carts": [
+    
+  ]
+}
