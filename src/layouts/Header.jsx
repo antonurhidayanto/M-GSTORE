@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <header className='h-16 border-b flex justify-between items-center px-8'>
         {/* brand */}
-        <p className='text-xl font-bold hover:cursor-pointer'>M & G Store</p>
+        <a href ="/" className='text-xl font-bold hover:cursor-pointer'>M & G Store</a>
         {/* search Bar */}
         <Input className='max-w-[600px]' placeholder='Search...'></Input>
         {/* user menu */}
