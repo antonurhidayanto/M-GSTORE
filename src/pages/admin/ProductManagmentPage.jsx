@@ -68,7 +68,7 @@ const ProductManagmentPage = () => {
                 })
                 console.log(response.data)
                 setNextPage(Boolean(response.data.next))
-                setProducts(response.data.data.products)
+                setProducts(response.data.products)
             }catch(error){
                 console.log(error)
             }

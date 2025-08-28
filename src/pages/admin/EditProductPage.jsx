@@ -20,7 +20,7 @@ const EditProductPage = () => {
     const fetchProduct = async () => {
         try{
             const response = await axiosInstance.get("/products")    
-            setProducts(response.data.find((data) => data.id == params.productId))
+            setProducts(response.data.products.find((data) => data.id == params.productId))
             }catch(error){
                 console.log(error)
             }
