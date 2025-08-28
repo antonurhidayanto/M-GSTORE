@@ -11,7 +11,7 @@ const CreateProductPage = () => {
 
     const handleCreateProduct = async (values) => {
        try{
-            await axiosInstance.post("/products", values)
+            await axiosInstance.post("/products/add", values)
             alert("Product created successfully")
             navigate("/admin/product")
        }catch(err){

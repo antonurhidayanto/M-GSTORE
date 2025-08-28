@@ -11,11 +11,13 @@ const HomePage = () => {
 
     const userSelector = useSelector((state) => state.user)
     console.log(userSelector,"ini user selector")
+
     const fetchProduct = async () => {
         setIsLoading(true)
         try {
             const response = await axiosInstance.get('/products')
-            dataSetProducts(response.data)
+            console.log("product:",response.data.products)
+            dataSetProducts(response.data.products)
         } catch (error) {
             console.log(error)
         }finally{
@@ -37,7 +39,7 @@ const HomePage = () => {
                   title={product.title}
                   price={product.price}
                   stock={product.stock}
-                  imageUrl={product.imageUrl}
+                  imageUrl={product.images?.[0] || product.thumbnail}
                 />
             </div>
         )

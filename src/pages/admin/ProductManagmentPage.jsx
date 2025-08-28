@@ -68,7 +68,7 @@ const ProductManagmentPage = () => {
                 })
                 console.log(response.data)
                 setNextPage(Boolean(response.data.next))
-                setProducts(response.data.data)
+                setProducts(response.data.data.products)
             }catch(error){
                 console.log(error)
             }
@@ -198,7 +198,7 @@ const ProductManagmentPage = () => {
                             <TableCell>{product.title}</TableCell>
                             <TableCell>Rp {product.price.toLocaleString('id-ID')}</TableCell>
                             <TableCell>{product.stock}</TableCell>
-                            <TableCell>
+                            {/* <TableCell>
                                  <img src={product.imageUrl} alt={product.title} className='w-14 h-14 object-cover cursor-pointer' onClick={() => handleImageClick(product.imageUrl,product.id)}/>
                             
                                 {showPreview && selectedImage === product.imageUrl && (
@@ -213,6 +213,35 @@ const ProductManagmentPage = () => {
                                         />
                                         </div>
                                     )}
+                            </TableCell> */}
+                            <TableCell>
+                                {(() => {
+                                    const imageSrc = product.thumbnail || product.images?.[0] || "https://via.placeholder.com/150";
+
+                                    return (
+                                    <>
+                                        <img
+                                        src={imageSrc}
+                                        alt={product.title}
+                                        className="w-14 h-14 object-cover cursor-pointer"
+                                        onClick={() => handleImageClick(imageSrc, product.id)}
+                                        />
+
+                                        {showPreview && selectedImage === imageSrc && (
+                                        <div
+                                            className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center"
+                                            onClick={handleClosePreview}
+                                        >
+                                            <img
+                                            src={imageSrc}
+                                            alt={product.title}
+                                            className="max-w-md max-h-md"
+                                            />
+                                        </div>
+                                        )}
+                                    </>
+                                    );
+                                })()}
                             </TableCell>
                             <TableCell>
                                 <div className='flex gap-4'>

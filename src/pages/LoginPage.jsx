@@ -44,34 +44,71 @@ const LoginPage = () => {
     })
     const [isShowPassword, setIsShowPassword] = useState(false)
 
-    const handleSubmit = async (values) => { 
-       console.log(values)
-        // alert(`username:${username} | password:${password}`)
-        try{
-            const userResponse = await axiosInstance.get("/users",{
-                params:{
-                    username: values.username,
-                }
-            })
-            if(!userResponse.data.length || userResponse.data[0].password !== values.password ){
-                alert("Invalid Login")
-                return
-            }
-            alert ("Login Success " + userResponse.data[0].username)
-            // Navigate("/admin/product")
-            dispatch({
-                type: "USER_LOGIN", payload: {
-                    username: userResponse.data[0].username,
-                    id: userResponse.data[0].id,
-                    role: userResponse.data[0].role
-                }
-            })
-            localStorage.setItem("current-user", userResponse.data[0].id)
-            form.reset()
-        }catch(error){
-            console.log(error)
-        }
-    }
+    // const handleSubmit = async (values) => { 
+    //    console.log(values)
+    //     // alert(`username:${username} | password:${password}`)
+    //     try{
+    //         const userResponse = await axiosInstance.get("/users",{
+    //             params:{
+    //                 username: values.username,
+    //             }
+    //         })
+    //         if(!userResponse.data.length || userResponse.data[0].password !== values.password ){
+    //             alert("Invalid Login")
+    //             return
+    //         }
+    //         alert ("Login Success " + userResponse.data[0].username)
+    //         // Navigate("/admin/product")
+    //         dispatch({
+    //             type: "USER_LOGIN", payload: {
+    //                 username: userResponse.data[0].username,
+    //                 id: userResponse.data[0].id,
+    //                 role: userResponse.data[0].role
+    //             }
+    //         })
+    //         localStorage.setItem("current-user", userResponse.data[0].id)
+    //         form.reset()
+    //     }catch(error){
+    //         console.log(error)
+    //     }
+    // }
+
+    const handleSubmit = async (values) => {
+  // Hardcoded dummy account (bisa kamu ubah sesuai kebutuhan)
+  const dummyAccount = {
+    id: 1,
+    username: "admin",
+    password: "admin123",
+    role: "admin",
+  };
+
+  // Cek username & password yang diisi user
+  if (values.username !== dummyAccount.username || values.password !== dummyAccount.password) {
+    alert("Invalid Login");
+    return;
+  }
+
+  // Buat payload user (tidak menyimpan password ke Redux/localStorage demi keamanan)
+  const dummyUser = {
+    id: dummyAccount.id,
+    username: dummyAccount.username,
+    role: dummyAccount.role,
+  };
+
+  // Simpan ke Redux
+  dispatch({ type: "USER_LOGIN", payload: dummyUser });
+
+  // Simpan ID user ke localStorage
+  localStorage.setItem("current-user", dummyUser.id);
+
+  alert("Login Success: " + dummyUser.username);
+
+  // Redirect
+  Navigate("/admin/product");
+
+  form.reset();
+};
+
 
     
   return (
