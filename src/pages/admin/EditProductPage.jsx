@@ -51,7 +51,7 @@ const EditProductPage = () => {
             defaultTitle={products.title}
             defaultPrice={products.price}
             defaultStock={products.stock}
-            defaultImageUrl={products.imageUrl}
+            defaultImageUrl={products.images?.[0] || products.thumbnail}
             buttonTitle="update"
             />
             ) : (
